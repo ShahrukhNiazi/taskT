@@ -25,6 +25,7 @@ const AppointmentContact = () => {
             <Text style={styles.labelText}>
               Description
             </Text>
+            
             <TextInput
               style={styles.textarea}
               multiline={true}
