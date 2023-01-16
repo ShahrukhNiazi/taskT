@@ -47,9 +47,7 @@ const AppointmentContact = () => {
               Repeat every
             </Text>
             <Selectset />
-
-            
-            <Text style={styles.para}>
+          <Text style={styles.para}>
               Please mark the checkboxs as checked if you want selected attendes and contact to
               recieve reminders eg. if set 30 minutes before the appointment start.
               Note that this feature requires cron job to be configured.
