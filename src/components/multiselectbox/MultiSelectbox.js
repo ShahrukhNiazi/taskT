@@ -69,7 +69,8 @@ export const Multiselection = () => {
   return (
     <>
       <SelectBox 
-         label={false}
+         listOptionProps={{nestedScrollEnabled: true}}
+          label={false}
           multiOptionContainerStyle={{
           height: 40,
           shadowRadius: 2,
@@ -79,8 +80,8 @@ export const Multiselection = () => {
           padding: 3,
           display: 'flex',
           alignItems: 'center',
-          backgroundColor:'#FFB156'
-        }}
+           backgroundColor:'#FFB156',
+         }}
         containerStyle={{
           height: 60,
           shadowRadius: 2,
@@ -106,8 +107,7 @@ export const Multiselection = () => {
         arrowIconColor = '#FFB156'
         itemIconStyle = '#ccc'
         searchIconColor = '#FFB156'
-        toggleIconColor	= '#FFB156'
-        />
+        toggleIconColor	= '#FFB156' />
     </>
   )
 

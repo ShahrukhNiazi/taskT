@@ -78,10 +78,7 @@ const App = () => {
             </View>
           </View>
           <View>
-
-
-            
-            <Selectset />
+             <Selectset />
           </View>
           <View style={[styles.MarTop]}>
             <View>

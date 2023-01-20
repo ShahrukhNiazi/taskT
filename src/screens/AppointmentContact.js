@@ -4,7 +4,8 @@ import { InputField } from '../components/InputField/InputField'
 import { Selectset } from '../components/selectlist/SelectList';
 import { SingleDatepicker } from '../components/singledatepicker/SingleDatepicker';
 import CheckBox from '@react-native-community/checkbox';
-import { Images } from '../../utilites/images';
+import { Multiselection } from '../components/multiselectbox/MultiSelectbox';
+
 
 
 const AppointmentContact = () => {
@@ -13,7 +14,7 @@ const AppointmentContact = () => {
 
   return (
     <>
-      <View style={styles.maincontainer}>
+      <View style={styles.maincontainer} >
         <View>
           <Text style={styles.labelText}>New appointment</Text>
         </View>
@@ -25,7 +26,6 @@ const AppointmentContact = () => {
             <Text style={styles.labelText}>
               Description
             </Text>
-            
             <TextInput
               style={styles.textarea}
               multiline={true}
@@ -38,17 +38,52 @@ const AppointmentContact = () => {
             <Selectset />
           </View>
           <View style={styles.MarginTop}>
+            <Text style={styles.labelText}>
+            Leads
+            </Text>
+            <Selectset />
+          </View>
+          <View  >
+            <InputField title='Name' />
+          </View>
+          <View >
+            <InputField title='Email ' />
+          </View>
+           <View >
+            <InputField title='Phone (Ex: +1 69 1234 5678) ' />
+          </View>
+          <View >
+            <InputField title='Contact' />
+          </View>
+          <View style={styles.MarginTop}>
             <SingleDatepicker />
           </View>
-          <View>
+          <View >
             <InputField title='Appointment Location (optional)' />
           </View>
           <View style={styles.MarginTop}>
             <Text style={styles.labelText}>
-              Repeat every
+            Attendees
+            </Text>
+            <Multiselection />
+          </View>
+          <View style={styles.MarginTop}>
+            <Text style={styles.labelText}>
+              Appointment Type
             </Text>
             <Selectset />
-          <Text style={styles.para}>
+          </View>
+          <View style={styles.MarginTop}>
+            <Text style={styles.labelText}>
+            Repeat every
+            </Text>
+            <Selectset />
+          </View>
+           <View >
+            <InputField title='Total Cycles ' />
+          </View>
+          <View >
+            <Text style={styles.para}>
               Please mark the checkboxs as checked if you want selected attendes and contact to
               recieve reminders eg. if set 30 minutes before the appointment start.
               Note that this feature requires cron job to be configured.
@@ -83,7 +118,6 @@ const AppointmentContact = () => {
               multiline={true}
               numberOfLines={4} />
           </View>
-
         </ScrollView>
       </View>
     </>
