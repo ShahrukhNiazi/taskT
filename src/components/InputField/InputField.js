@@ -14,9 +14,7 @@ export const InputField = (props, {
 }) => {
     const [toggle, setToggle] = useState(false)
     const [text, settext] = useState(value)
-
-
-
+ 
     return (
         <>
             <View>

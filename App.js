@@ -19,9 +19,15 @@ import { FileAttached } from '././src/components/filesUpload/FilesUpload.js';
 
 
 
-const App = () => {
-  const [toggleCheckBox, setToggleCheckBox] = useState(false)
 
+
+
+
+
+
+const App = () => {
+  const [toggleCheckBox, setToggleCheckBox] = useState(false);
+ 
   return (
     <View style={styles.maincontainer}>
       <View style={styles.dflex}>
@@ -71,8 +77,7 @@ const App = () => {
             <CheckBox
               disabled={false}
               value={toggleCheckBox}
-              onValueChange={(newValue) => setToggleCheckBox(newValue)}
-            />
+              onValueChange={(newValue) => setToggleCheckBox(newValue)}/>
             <View>
               <Text style={styles.labelText}> estimated to</Text>
             </View>
